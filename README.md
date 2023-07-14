@@ -1,2 +1,2 @@
-# minha_appointement_checker
+# Minha Appointements Checker
 A bot which checks appointement availability.
