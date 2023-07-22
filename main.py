@@ -8,8 +8,8 @@ bot = telebot.TeleBot(bot_token)
 def get_preInscriptionId(demande_number,identity_card_number):
     ### Function to return preInscriptionId.
     params = {
-        'wassitNumber': '055194001470',
-        'identityDocNumber': '109940174001470009',
+        'wassitNumber': demande_number,
+        'identityDocNumber': identity_card_number,
         }
     return make_request(endpoint="/validateCandidate/query",
                         params=params,
