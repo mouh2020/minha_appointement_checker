@@ -14,10 +14,11 @@ A bot designed to check for available appointments on ANEM website.
   
 **How to start the bot locally?**
 
-*   Get your telegram chat\_id from [here](https://t.me/get_id_bot) 
+*   Download from [here](https://www.python.org/ftp/python/3.10.0/python-3.10.0.exe) and install python (check the box add to path).
+*   Get your telegram chat\_id from [here](https://t.me/get_id_bot)
 *   Create new bot from [here](https://web.telegram.org/k/#@BotFather) and extract the bot_token.
 *   Send at least one message from your Telegram account to the Bot.
-*   Open config.py file and put the chat\_id and bot_token to their corresponding name.
+*   Open config.py file and put the chat\_id and bot_token.
 *   Clone the repository or download it from [here](https://github.com/mouh2020/minha_appointement_checker/archive/refs/heads/master.zip) and unzip it.
 *   Open minha_appointement_checker folder on cmd and type :  
 ```bash
