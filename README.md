@@ -14,7 +14,7 @@ A bot designed to check for available appointments on ANEM website.
   
 **How to start the bot locally?**
 
-*   Download Python from [here](https://www.python.org/ftp/python/3.10.0/python-3.10.0.exe) and install it (check the box add to path).
+*   Download Thonny from [here](https://github.com/thonny/thonny/releases/download/v4.1.1/thonny-py38-4.1.1.exe) and install it.
 *   Get your telegram chat\_id from [here](https://t.me/get_id_bot)
 *   Create new bot from [here](https://web.telegram.org/k/#@BotFather) and extract the bot_token.
 *   Send at least one message from your Telegram account to the Bot.
