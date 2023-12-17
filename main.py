@@ -36,27 +36,32 @@ counter = 0
 message = bot.send_message(chat_id=int(chat_id),
                            text=f'Start checking for Appointements for {counter} times')
 while True : 
-    counter+=1
-    bot.edit_message_text(text=f"Start checking for Appointements for {counter} times",
-                          chat_id=int(chat_id),
-                          message_id=message.id)
-    PreInscriptionId = get_preInscriptionId(demande_number,
-                                            identity_card_number)
-    print(PreInscriptionId)
-    StructureId =  get_structureId(PreInscriptionId)
-    print(StructureId)
-    Dates       = get_dates(PreInscriptionId,StructureId)
-    print(Dates)
-    if isinstance(Dates,list) :
-        if len(Dates) == 0 : 
-            bot.edit_message_text(f"There is no appointements available.\n Checking for {counter} times \n Wait for {str(check_frequency_minutes)} minutes.",
-                          chat_id=int(chat_id),
-                          message_id=message.id)
-        else :
-            dates = "\n-"+"\n-".join(Dates)
-            message = f"📣📣 New Appointements Alert 📣📣 {str(dates)}"
-            bot.send_message(chat_id=chat_id,
-                             text=message)
-            break
-    time.sleep(60*check_frequency_minutes)
+    try :
+        counter+=1
+        bot.edit_message_text(text=f"Start checking for Appointements for {counter} times",
+                            chat_id=int(chat_id),
+                            message_id=message.id)
+        PreInscriptionId = get_preInscriptionId(demande_number,
+                                                identity_card_number)
+        print(PreInscriptionId)
+        StructureId =  get_structureId(PreInscriptionId)
+        print(StructureId)
+        Dates       = get_dates(PreInscriptionId,StructureId)
+        print(Dates)
+        if isinstance(Dates,list) :
+            if len(Dates) == 0 : 
+                bot.edit_message_text(f"There is no appointements available.\n Checking for {counter} times \n Wait for {str(check_frequency_minutes)} minutes.",
+                            chat_id=int(chat_id),
+                            message_id=message.id)
+            else :
+                dates = "\n-"+"\n-".join(Dates)
+                message = f"📣📣 New Appointements Alert 📣📣 {str(dates)}"
+                bot.send_message(chat_id=chat_id,
+                                text=message)
+                break
+        time.sleep(60*check_frequency_minutes)
+    except Exception as e :
+        bot.edit_message_text(f"An error occured : {str(e)}.\n Checking for {counter} times \n Wait for {str(check_frequency_minutes)} minutes.",
+                            chat_id=int(chat_id),
+                            message_id=message.id)
     
