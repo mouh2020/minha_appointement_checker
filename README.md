@@ -13,15 +13,15 @@ A bot designed to check for available appointments on ANEM website.
 * The bot starts listening for new apppointements and send them to Telegram from ESP32.
   
 **How to start the bot locally?**
-
-*   Get your telegram chat\_id from [here](https://t.me/get_id_bot) 
-*   Create new bot from [here](http://https://t.me/BotFather) and extract the bot_token.
-*   Send at least one message from your Telegram account to the Bot.
-*   Open config.py file and put the chat\_id and bot_token to their corresponding name.
 *   Clone the repository or download it from [here](https://github.com/mouh2020/minha_appointement_checker/archive/refs/heads/master.zip) and unzip it.
+*   Install Thonny.
+*   Get your telegram chat\_id from [here](https://t.me/get_id_bot)
+*   Create new bot from [here](https://web.telegram.org/k/#@BotFather) and extract the bot_token.
+*   Send at least one message from your Telegram account to the Bot.
+*   Open config.py file and put the chat\_id and bot_token.
 *   Open minha_appointement_checker folder on cmd and type :  
 ```bash
-  pip install -r requirements 
+  pip install -r requirements.txt
 ```
 ```bash
   python main.py
